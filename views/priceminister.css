@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700");
+
+
+html,body {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #f3f3f4;
+}
+
+#web-box {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.text-footer-box {
+  padding-top: 30px;
+}
+.footer-box {
+  background-color: white;
+  margin-top: 10px;
+}
+.summary-table {
+  color : #989898;
+  font-size: 12px;
+  margin: 5px;
+  text-align: left;
+
+}
+.marginTop_15 {
+  margin-top: 15px;
+}
+
+.paddingH_3 {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.summary {
+  color : #989898;
+  font-size: 12px;
+}
+
+
+.summary-listing {
+  color:grey;
+  font-size: 12px;
+}
+
+.seller-box {
+  border-top: 1px solid  #e7eaec;
+}
+
+.seller-summary-box {
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.seller-question{
+  visibility:hidden;
+}
+.confiancePM {
+  border-top: 1px solid  #e7eaec;
+  padding-top: 5px;
+  margin-top: 10px;
+}
+.stock {
+  color: green;
+  font-weight: 500;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+
+
+
+.summary-product {
+  text-align: center;
+}
+.fontSize10 {
+  font-size: 3;
+}
+.valign > [class*="col"] {
+  display: inline-block;
+  float: none;
+  font-size: 14px;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+@media screen and (max-width:980px) {
+  .buy-box-table{
+    display: none;
+  }
+
+  .hidden-mobile{
+    display: none;
+  }
+}
+@media screen and (min-width:980px) {
+  .hidden-desktop{
+    display: none;
+  }
+
+}
+
+.next-product {
+  margin: 25px;
+}
+
+
+@media screen and (max-width: 980px) {
+  .product-box {
+    text-align: center;
+  }
+
+  .selling {
+    display: none;
+  }
+
+}
+
+.header {
+  background: white;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-top: 4px solid  #e7eaec;
+}
+
+.bkColorPM {
+  background-color: rgb(245,188,99);
+}
+
+
+.btn:focus {
+  background-color: rgb(255,188,99);
+  opacity: 0.90;
+}
+.btn:hover {
+  background-color: rgb(255,188,99);
+  opacity: 0.90;
+}
+
+.product-box {
+  background-color: white;
+  padding-top: 25px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-top: 4px solid  #e7eaec;
+}
+.product-box {
+  background-color: white;
+  padding-top: 25px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-top: 4px solid  #e7eaec;
+}
+.yellow {
+  color: rgb(252, 210, 10);
+}
+
+.grey {
+  color: grey;
+}
+
+.purchaseBtn {
+  background-color: #f5b027;
+  border-color: #f5b027;
+}
+
+.rsp {
+  font-weight: 500;
+  color:#bf0000;
+  margin-left: 3px;
+}
+#toolbar .wrapper {
+    text-align: center;
+}
+.purchaseBtn : hover{
+  background-color: #f5b027;
+  border-color: #f5b027;
+}
+
+.descriptif {
+  margin-left: 10px;
+  color: #09f;
+  font-size: 12px;
+}
+
+.sell-box {
+  position: relative;
+  float: right;
+  margin-right: 15px
+}
+.shippingMode {
+  color: #09f;
+}
+.category {
+  margin: 25px 10px 10px 10px;
+  font-size: 10px;
+  color: grey;
+}
+.offerSummary {
+  color : #989898;
+  font-size: 12px;
+}
+
+.smallPrice {
+  font-weight: 500;
+  color : red;
+}
+
+.sellerSummary {
+  font-size: 13px;
+}
+
+.superPoints {
+  color: red;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+.title {
+  color: black;
+  font-size: 18px;
+  font-weight: 350;
+  margin-right: 3px;
+}
+
+.product-title-box {
+  margin-left: 10px;
+  margin-right: 10px;
+
+  padding-bottom: 8px;
+  border-bottom: 1px solid  #e7eaec;
+}
+
+.price {
+  color: red;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.allow-pickup {
+  font-size: 12px;
+}
+.avis {
+  color: #1f55ad;
+  font-size: 12px;
+}
+
+.free-shipping {
+  color: green;
+}
+
+
+
+
+
+
+/*****************************/
+/* CSS Tableaux des produits */
+/*****************************/
+.listing-box {
+  background-color: white;
+  padding-top: 25px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-top: 4px solid  #e7eaec;
+}
+
+.table > tbody > tr > td {
+  vertical-align: middle;
+}
+
+.stock-listing {
+  color: green;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.rsp-box-listing {
+  margin-top: 5px;
+}
