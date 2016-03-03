@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
-
-
+import  { Link } from 'react-router';
 class HeaderComponent extends React.Component {
 
   constructor(props) {
@@ -21,11 +19,12 @@ handleTextChange(e){
   render(){
 
     return  <div className="row">
+              <div className="col-md-12">
                 <div className="header">
                    <div className="row">
                       <div className="col-md-3 vcenter">
                          <img src="http://www.accengage.com/wp-content/uploads/2014/09/logo-price-minister-rakuten-group.png"
-                            className="img-responsive center-block" alt="Responsive image"/>
+                            className="img-responsive center-block image-logo-size-mobile" alt="Responsive image"/>
                       </div>
                       <div className="col-md-6 vcenter">
                          <div className="input-group ">
@@ -57,14 +56,16 @@ handleTextChange(e){
                             <input id="query" name="query" type="text" className="form-control" onChange={this.handleTextChange.bind(this)} placeholder="Rechercher ..."/>
                             <span className="input-group-btn">
                             <button className="btn btn-default bkColorPM" type="button" >
-                              <Link to={this.state.url}><span className="glyphicon glyphicon-search"></span></Link>
+                            <Link to={this.state.url}><span className="glyphicon glyphicon-search"></span></Link>
                             </button>
                             </span>
                          </div>
                       </div>
                    </div>
+                   <br className="hidden-desktop"/>
                 </div>
-             </div>;
+              </div>
+            </div>;
   }
 }
 
