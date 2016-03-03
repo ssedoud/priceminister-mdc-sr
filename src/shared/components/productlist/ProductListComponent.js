@@ -29,7 +29,7 @@ class ProductListComponent extends React.Component {
     }
     ajax
     .get(`${baseUrl}channel=hackathon${keywordParam}${pageParam}`)
-      .set('User-Agent', "some spoofed agent")
+      //.set('User-Agent', "some spoofed agent")
         .end((error, response) => {
             if (!error && response) {
                 this.setState({ productItemList : response.body['result'].products });
@@ -41,7 +41,7 @@ class ProductListComponent extends React.Component {
 
   }
 
-componentWillMount(){
+componentDidMount(){
   console.log('ajax Mount call');
    this.getProductList(this.props.keyword,this.props.pageNumber);
 }

@@ -6,9 +6,12 @@ import CarouselComponent from './CarouselComponent';
 
 class HomePage extends React.Component {
   render(){
-    return  <div className="col-md-7">
-                        <CarouselComponent/>
+            return  <div className="row">
+                        <MenuComponent/>
+                        <div className="col-md-7">
+                            <CarouselComponent/>
                         <br/>
+                        </div>
                       </div>;
   }
 }
