@@ -19,9 +19,13 @@ module.exports = {
   resolve: {
     extensions: ['', '.js']
   },
+  node: {
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
+  },
   module: {
-    loaders: [
-      { test: /\.jsx?$/, loaders: ['react-hot', 'babel-loader?experimental'], exclude: /node_modules/ }
-    ]
+    loaders: [{ test: /\.jsx?$/, loaders: ['react-hot', 'babel-loader?experimental'], exclude: /node_modules/ }
+    ,      { test: /\.json$/, loader: 'json-loader' }]
   }
 }
