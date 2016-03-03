@@ -56,7 +56,7 @@ handleTextChange(e){
                             <input id="query" name="query" type="text" className="form-control" onChange={this.handleTextChange.bind(this)} placeholder="Rechercher ..."/>
                             <span className="input-group-btn">
                             <button className="btn btn-default bkColorPM" type="button" >
-                            <Link to={this.state.url}><span className="glyphicon glyphicon-search"></span></Link>
+                            <Link  className="btn-sm" to={this.state.url}><span className="glyphicon glyphicon-search"></span></Link>                        
                             </button>
                             </span>
                          </div>
