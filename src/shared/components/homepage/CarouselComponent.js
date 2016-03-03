@@ -8,15 +8,20 @@ class CarouselComponent extends React.Component {
                         <ol className="carousel-indicators">
                            <li data-target="#carousel-example-generic" data-slide-to="0" className="active"></li>
                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                           <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                         </ol>
                         <div className="carousel-inner" role="listbox">
                            <div className="item active">
-                           <img src="http://pmcdn.staticpmrk.com/visuels/2016-02-19_jardin_megaban/746x215_megabanner_jardinb.jpg"
-                            className="img-responsive center-block" alt="..." border="0"/>
+                           <img src="http://pmcdn.staticpmrk.com/visuels/2015-08-17_SBP/746x215_megabanner.png"
+                            className="img-responsive center-block" alt="carousel1" border="0"/>
                            </div>
                            <div className="item">
-                              <img src="http://pmcdn.staticpmrk.com/visuels/2016-02-19_jardin_megaban/746x215_megabanner_jardinb.jpg"
-                               className="img-responsive center-block" alt="..." border="0"/>
+                           <img src="http://pmcdn.staticpmrk.com/visuels/_merch/746x215_S7.jpg"
+                               className="img-responsive center-block" alt="carousel2" border="0"/>
+                           </div>
+                           <div className="item">
+                           <img src="http://pmcdn.staticpmrk.com/visuels/_merch/746x215_CO.jpg"
+                               className="img-responsive center-block" alt="carousel3" border="0"/>
                            </div>
                         </div>
                         <a className="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">

@@ -2,7 +2,7 @@ import React from 'react';
 
 class MenuComponent extends React.Component {
   render(){
-    return <div className="col-md-3">
+    return <div className="col-md-3 hidden-mobile">
                    <div className="list-group">
                       <a href="#" className="list-group-item disabled">Parcourir toutes les catégories</a>
                       <a href="#" className="list-group-item">Livres et BD</a>
