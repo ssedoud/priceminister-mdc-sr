@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
-import OfferSummaryComponent from './productList/OfferSummaryComponent'
-import ScoreComponent from './common/ScoreComponent'
+import OfferSummaryComponent from './OfferSummaryComponent'
+import ScoreComponent from '../common/ScoreComponent'
 
 
 class ProductListDetailComponent extends React.Component {

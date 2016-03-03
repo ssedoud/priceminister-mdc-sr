@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router';
+
 
 class HeaderComponent extends React.Component {
 
@@ -6,15 +8,10 @@ class HeaderComponent extends React.Component {
     super(props);
     this.state = {
       keyword: '',
-      url:'',
+      url:'/productList/',
     };
 
   }
-
-handleSearchClick(){
-  var nextUrl = '/productList/' + this.state.keyword;
-  this.props.history.replace(nextUrl);
-}
 
 handleTextChange(e){
   this.setState({keyword: e.target.value});
@@ -59,8 +56,8 @@ handleTextChange(e){
                             <input type="hidden" name="search_param" value="all" id="search_param"/>
                             <input id="query" name="query" type="text" className="form-control" onChange={this.handleTextChange.bind(this)} placeholder="Rechercher ..."/>
                             <span className="input-group-btn">
-                            <button className="btn btn-default bkColorPM"  onClick={this.handleSearchClick.bind(this)}  type="button" >
-                              <span className="glyphicon glyphicon-search"></span>
+                            <button className="btn btn-default bkColorPM" type="button" >
+                              <Link to={this.state.url}><span className="glyphicon glyphicon-search"></span></Link>
                             </button>
                             </span>
                          </div>
