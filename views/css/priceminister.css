@@ -12,6 +12,10 @@ html,body {
   margin: 0 auto;
 }
 
+.size13 {
+  font-weight: 200;
+}
+
 .text-footer-box {
   padding-top: 30px;
 }
@@ -29,7 +33,9 @@ html,body {
 .marginTop_15 {
   margin-top: 15px;
 }
-
+.header-bottom {
+  margin: 5px;
+}
 .paddingH_3 {
   padding-left: 3px;
   padding-right: 3px;
@@ -100,7 +106,7 @@ html,body {
   vertical-align: middle;
 }
 
-@media screen and (max-width:980px) {
+@media screen and (max-width:991px) {
   .buy-box-table{
     display: none;
   }
@@ -108,8 +114,12 @@ html,body {
   .hidden-mobile{
     display: none;
   }
+
+  .image-logo-size-mobile {
+    width: 230px;
+  }
 }
-@media screen and (min-width:980px) {
+@media screen and (min-width:991px) {
   .hidden-desktop{
     display: none;
   }
@@ -125,7 +135,9 @@ html,body {
   .product-box {
     text-align: center;
   }
-
+  .product-box2 {
+    text-align: center;
+  }
   .selling {
     display: none;
   }
@@ -153,22 +165,25 @@ html,body {
   opacity: 0.90;
 }
 
+.product-box2 {
+  background-color: white;
+  padding-top: 25px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  border-top: 4px solid  #e7eaec;
+}
+
 .product-box {
   background-color: white;
   padding-top: 25px;
   padding-left: 15px;
   padding-bottom: 10px;
-  margin-bottom: 10px;
+  margin-top: 10px;
   border-top: 4px solid  #e7eaec;
 }
-.product-box {
-  background-color: white;
-  padding-top: 25px;
-  padding-left: 15px;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  border-top: 4px solid  #e7eaec;
-}
+
+
 .yellow {
   color: rgb(252, 210, 10);
 }
@@ -281,6 +296,7 @@ html,body {
   padding-left: 15px;
   padding-bottom: 10px;
   margin-bottom: 10px;
+  margin-top: 10px;
   border-top: 4px solid  #e7eaec;
 }
 
