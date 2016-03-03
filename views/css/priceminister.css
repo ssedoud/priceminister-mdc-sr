@@ -21,7 +21,9 @@ html,body {
 }
 .footer-box {
   background-color: white;
-  margin-top: 10px;
+  bottom:0;
+  border-top: 4px solid  #e7eaec;
+  margin-top: 50px;
 }
 .summary-table {
   color : #989898;
