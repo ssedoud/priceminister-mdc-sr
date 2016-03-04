@@ -1,5 +1,6 @@
 import React from 'react';
 import QualityComponent from '../common/QualityComponent';
+import ProductNbAdverts from './ProductNbAdverts';
 
 class ProductBuyBoxComponent extends React.Component {
   constructor(props) {
@@ -32,7 +33,6 @@ class ProductBuyBoxComponent extends React.Component {
   }
 
   renderBestOffer() {
-    console.log("renderBestOffer");
     var advert = this.getBuyBoxAdvert(this.props.product.bestOffers);
 
     return <div className="marginTop_15">
@@ -57,6 +57,7 @@ class ProductBuyBoxComponent extends React.Component {
         </div>
         <br />
 
+
         <img src="https://image.freepik.com/free-icon/logistics-delivery-truck-in-movement_318-61800.png"
              width="20"
              height="20"
@@ -72,11 +73,8 @@ class ProductBuyBoxComponent extends React.Component {
 
         <br /><br />
 
-        <span className="offerSummary"> {this.props.product.nbNewAdverts} neufs dès </span>
-        <a href ="#"><span className="smallPrice">{this.props.product.newBestPrice} € </span> </a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <span className="offerSummary">{this.props.product.nbUsedAdverts} occasions dès </span>
-        <a href ="#"><span className="smallPrice">{this.props.product.usedBestPrice} € </span> </a>
-
+        <ProductNbAdverts nbAdverts={this.props.product.nbNewAdverts} bestPrice={this.props.product.newBestPrice} advertType='new' />
+        <ProductNbAdverts nbAdverts={this.props.product.nbUsedAdverts} bestPrice={this.props.product.usedBestPrice} advertType='used' />
           <br /><br />
           <div className="seller-box">
             <div className="seller-summary-box">

@@ -49,7 +49,6 @@ class ProductPageDetailComponent extends React.Component {
                   }
                 });
             } else {
-                console.log(error);
                 var response = this.getFakeResponse();
                 this.setState({
                   result : response.result,
@@ -79,8 +78,6 @@ class ProductPageDetailComponent extends React.Component {
 
   // Mettre dans ProductPageDetailComponent.render() le contenu de la page
   render() {
-    console.log("Parent");
-    console.log(this.state.product);
     return <div>
             <div className="row">
               <div className="col-md-12">

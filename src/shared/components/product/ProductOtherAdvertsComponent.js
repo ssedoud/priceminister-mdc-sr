@@ -11,7 +11,6 @@ class ProductOtherAdvertsComponent extends React.Component {
   }
 
   advertComment(advertComment) {
-    console.log(advertComment);
     if (typeof advertComment !== 'undefined') {
       return <span>{advertComment}</span>;
     }
@@ -26,7 +25,6 @@ class ProductOtherAdvertsComponent extends React.Component {
   }
 
   renderAdvert() {
-    console.log(this.props.product.adverts);
     return this.props.product.adverts.map((advert) =>
       <tr>
 
