@@ -4,6 +4,7 @@ import { Link, RouteHandler } from 'react-router';
 import CarouselComponent from './CarouselComponent';
 import MaterialComponent from '../common/MaterialComponent';
 import FooterComponent from '../common/FooterComponent';
+import TopSellComponent from './TopSellComponent';
 
 class HomePage extends React.Component {
   render(){
@@ -18,7 +19,8 @@ class HomePage extends React.Component {
                         <div className="col-md-12">
                         <FooterComponent/>
                         </div>
-                       </div></div>
+                       </div>
+                      </div>
 
 ;
   }

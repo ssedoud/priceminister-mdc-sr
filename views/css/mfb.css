@@ -160,6 +160,15 @@
   line-height: 56px;
   width: 100%; }
 
+  .mfb-component__icon, .mfb-component__main-icon--active,
+  .mfb-component__main-icon--resting, .mfb-component__child-selling {
+    position: absolute;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 56px;
+    width: 100%; }
+
 .mfb-component__wrap {
   padding: 25px;
   margin: -25px; }
@@ -667,5 +676,3 @@
 /**
  * Apply this class to the html tag when developing the slide-in button
  */
-
-/*# sourceMappingURL=mfb.css.map */

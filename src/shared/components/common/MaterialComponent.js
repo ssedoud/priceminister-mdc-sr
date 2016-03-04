@@ -13,7 +13,7 @@ class MaterialComponent extends React.Component {
             <ul className="mfb-component__list">
               <li>
                 <a href="#" data-mfb-label="Mettre en vendre en 3 clics" className="mfb-component__button--child">
-                  <b><span className="mfb-component__child-icon size13">Vendre</span></b>
+                  <span className="mfb-component__child-selling">Vendre</span>
                 </a>
               </li>
 
