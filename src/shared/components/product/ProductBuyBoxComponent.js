@@ -99,7 +99,8 @@ class ProductBuyBoxComponent extends React.Component {
   render() {
     if (Object.keys(this.props.product).length === 0
      || JSON.stringify(this.props.product) === JSON.stringify({})
-     || typeof this.props.product.bestOffers === 'undefined') {
+     || typeof this.props.product.bestOffers === 'undefined'
+     || JSON.stringify(this.props.product.bestOffers) === JSON.stringify({})) {
       return <div className="col-md-7"></div>;
     } else {
       return <div className="col-md-7">
