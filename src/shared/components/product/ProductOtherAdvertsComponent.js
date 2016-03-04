@@ -33,7 +33,10 @@ class ProductOtherAdvertsComponent extends React.Component {
         <td className="col-md-2"><a className="price" href="#" > {advert.salePrice}€ <QualityComponent quality={advert.quality} /></a><br />
         <span className="stock-listing"><span className="glyphicon glyphicon-ok"></span>&nbsp;En stock</span>
         <div className="rsp-box-listing">
-        <img src="img/rsp_icon.png" width="20" height="20" alt="rsp"/>
+        <img src="http://www.man-deb-dev.priceminister.lan/photo/940666431.jpg"
+             width="20"
+             height="20"
+             alt="rsp"/>
         <span className="rsp">{advert.rspMinimumAmount}</span>
         </div>
         </td>
@@ -42,7 +45,10 @@ class ProductOtherAdvertsComponent extends React.Component {
         <div className="summary-listing">
         {this.advertComment(advert.sellerComment)}
         <br /><br />
-        <img src="img/truck.jpeg" width="20" height="20" alt="truck"/> &nbsp;
+        <img src="https://image.freepik.com/free-icon/logistics-delivery-truck-in-movement_318-61800.png"
+             width="20"
+             height="20"
+             alt="truck"/> &nbsp;
         <a href="#" className="shippingMode">Modes d''expédition </a>
         </div>
         </td>

@@ -43,7 +43,10 @@ class ProductBuyBoxComponent extends React.Component {
         {this.shipping(advert)}
         <br /><br />
 
-        <img src="img/rsp_icon.png" width="20" height="20" alt="rsp" />
+        <img src="http://www.man-deb-dev.priceminister.lan/photo/940666431.jpg"
+             width="20"
+             height="20"
+             alt="rsp" />
         <span className="rsp">{Number((advert.salePrice).toFixed(1))} Super Points</span> à cumuler
 
         <br /><br />
@@ -54,7 +57,10 @@ class ProductBuyBoxComponent extends React.Component {
         </div>
         <br />
 
-        <img src="img/truck.jpeg" width="20" height="20" alt="truck" /> &nbsp;
+        <img src="https://image.freepik.com/free-icon/logistics-delivery-truck-in-movement_318-61800.png"
+             width="20"
+             height="20"
+             alt="truck" /> &nbsp;
         <a href="#" className="shippingMode">Mode d'expédition</a>
 
         <br /><br />
@@ -75,7 +81,7 @@ class ProductBuyBoxComponent extends React.Component {
           <div className="seller-box">
             <div className="seller-summary-box">
               <div className="col-md-2 vcenter">
-                <img src="img/avatar.png"
+                <img src="https://cdn0.iconfinder.com/data/icons/superuser-web-kit/512/686909-user_people_man_human_head_person-512.png"
                      width="40"
                      height="40"
                      className="img-responsive img-circle center-block"

@@ -14,15 +14,19 @@ class ProductDataComponent extends React.Component {
              <h3>
                <img src={imageUrl}
                     className="img-responsive center-block"
-                    alt="Responsive image" />
+                    alt="Responsive image"
+                    width="250"
+                    height="250" />
              </h3>
            );
     }
     else {
       return <h3>
-               <img src="img/default_img.gif"
-                  className="img-responsive center-block"
-                  alt="Responsive image" />
+               <img src="http://www.man-deb-dev.priceminister.lan/res/static/0/bo/www/60537/fb/images/i18n/fr/cover_ML.gif"
+                    className="img-responsive center-block"
+                    alt="Responsive image"
+                    width="250"
+                    height="250" />
              </h3>;
     }
   }
