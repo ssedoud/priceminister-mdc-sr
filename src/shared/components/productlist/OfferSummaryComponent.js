@@ -5,7 +5,7 @@ import ProductNbAdverts from '../product/ProductNbAdverts';
 class OfferSummaryComponent extends React.Component {
 
    render() {
-     var carrierReturn = this.props.advertsNewCount > 0 && this.props.advertsUsedCount > 0 ? " - " : '';
+     var carrierReturn = this.props.advertsNewCount > 0 && this.props.advertsUsedCount > 0 ? <br/> : '';
      return  <div className="col-md-4">
                <a className="price" href="#" >{this.props.bestPrice} € </a> Comme Neuf
                <br/>

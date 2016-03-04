@@ -74,6 +74,7 @@ class ProductBuyBoxComponent extends React.Component {
         <br /><br />
 
         <ProductNbAdverts nbAdverts={this.props.product.nbNewAdverts} bestPrice={this.props.product.newBestPrice} advertType='new' />
+        <br/>
         <ProductNbAdverts nbAdverts={this.props.product.nbUsedAdverts} bestPrice={this.props.product.usedBestPrice} advertType='used' />
           <br /><br />
           <div className="seller-box">
