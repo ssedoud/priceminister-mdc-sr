@@ -19,6 +19,10 @@ class ProductListPage extends React.Component {
     });
   }
 
+  componentDidUpdate() {
+  window.scrollTo(0, 0)
+}
+
   render(){
     console.log("ProductListPage  " + this.props.params.searchKeyword + ", " + this.state.pageNumber);
     return <div>
