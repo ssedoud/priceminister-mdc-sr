@@ -25,6 +25,7 @@ module.exports = {
     tls: 'empty'
   },
   module: {
+    noParse: /node_modules\/json-schema\/lib\/validate\.js/,
     loaders: [{ test: /\.jsx?$/, loaders: ['react-hot', 'babel-loader?experimental'], exclude: /node_modules/ }
     ,      { test: /\.json$/, loader: 'json-loader' }]
   }
