@@ -83,6 +83,7 @@ html,body {
   border-top: 1px solid  #e7eaec;
   padding-top: 5px;
   margin-top: 10px;
+  margin-right: 15px;
 }
 .stock {
   color: green;
