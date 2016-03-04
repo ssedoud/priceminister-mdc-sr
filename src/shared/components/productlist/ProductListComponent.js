@@ -15,7 +15,7 @@ class ProductListComponent extends React.Component {
 
   getProductList(keyword, pageNumber){
     var keyword = keyword;
-    var baseUrl = 'http://ws.pminteg.fr/rest/navigation/v1/list?'
+    var baseUrl = 'http://ws.sse-deb-dev.priceminister.lan/rest/navigation/v1/list?'
 
     var keywordParam = '';
     if(keyword != undefined){

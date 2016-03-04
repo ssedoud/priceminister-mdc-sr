@@ -19,7 +19,7 @@ class ProductPageDetailComponent extends React.Component {
   }
 
   componentDidMount() {
-    var baseUrl = 'http://ws.pminteg.fr/rest/product/v1/get';
+    var baseUrl = 'http://ws.sse-deb-dev.priceminister.lan/rest/product/v1/get';
 
     ajax.get(`${baseUrl}?advertType=ALL&productId=${this.props.productId}&channel=hackathon&loadProductDetails=true`)
         .set({

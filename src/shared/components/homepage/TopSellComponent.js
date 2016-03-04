@@ -1,4 +1,5 @@
 import React from 'react';
+import ScoreComponent from '../common/ScoreComponent'
 
 class TopSellComponent extends React.Component {
 
