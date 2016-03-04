@@ -40,7 +40,7 @@ class ProductListComponent extends React.Component {
     );
   }
 
-  componentWillMount(){
+  componentDidMount(){
      this.getProductList(this.props.keyword, this.props.pageNumber);
   }
 
