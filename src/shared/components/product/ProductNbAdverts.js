@@ -2,7 +2,7 @@ import React from 'react';
 
 class ProductNbAdverts extends React.Component {
   render() {
-    if (this.props.nbAdverts > 0) {
+    if (this.props.nbAdverts > 0 && this.props.bestPrice > 0) {
       return <span><span className="offerSummary">
           {this.props.nbAdverts} {this.props.advertType === "new" ? 'neuf' : 'occasion'}{this.props.nbAdverts > 1 ? 's' : ''} dès
           </span>
