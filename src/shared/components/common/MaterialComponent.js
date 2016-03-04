@@ -7,8 +7,8 @@ class MaterialComponent extends React.Component {
     return (<ul id="menu" className="mfb-component--br mfb-zoomin hidden-desktop" data-mfb-toggle="hover">
           <li className="mfb-component__wrap">
             <a href="#" className="mfb-component__button--main">
-              <i className="mfb-component__main-icon--resting ion-plus-round"></i>
-              <i className="mfb-component__main-icon--active ion-close-round"></i>
+              <span className="mfb-component__main-icon--resting">+</span>
+              <span className="mfb-component__main-icon--active">+</span>
             </a>
             <ul className="mfb-component__list">
               <li>

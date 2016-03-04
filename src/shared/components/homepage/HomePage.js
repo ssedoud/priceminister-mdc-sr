@@ -12,6 +12,8 @@ class HomePage extends React.Component {
                         <MenuComponent/>
                         <div className="col-md-7">
                             <CarouselComponent/>
+                            <TopSellComponent/>
+
                         </div>
                         <MaterialComponent/>
                       </div>
