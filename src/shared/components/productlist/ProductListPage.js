@@ -27,17 +27,19 @@ class ProductListPage extends React.Component {
   render(){
     console.log("ProductListPage  " + this.props.params.searchKeyword + ", " + this.state.pageNumber);
     return <div>
+      <div className="row">
       <MenuComponent/>
       <div className="col-md-7">
         <ProductListComponent pageNumber={this.state.pageNumber} keyword={this.props.params.searchKeyword}/>
         <ProductListPaginationComponent changePageNumber={this.changePageNumber.bind(this)} currentPageNumber={this.state.pageNumber}/>
       </div>
+      </div>
+
       <div className="row">
         <div className="col-md-12">
           <FooterComponent/>
         </div>
       </div>
-
     </div>;
   }
 }
