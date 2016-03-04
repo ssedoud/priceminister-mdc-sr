@@ -1,24 +1,11 @@
 import React from 'react';
+import ProductNbAdverts from '../product/ProductNbAdverts';
 
 
 class OfferSummaryComponent extends React.Component {
 
    render() {
-
-     var usedOfferTag;
-
-     if(this.props.advertsUsedCount != 0 ){
-       usedOfferTag =
-       <div>
-         <span className="offerSummary"> {this.props.advertsUsedCount} occasion dès </span>
-         <a href ="#">
-          <span className="smallPrice">{this.props.usedBestPrice} €</span>
-         </a>
-       </div>;
-     }else{
-       usedOfferTag ='';
-     }
-
+     var carrierReturn = this.props.advertsNewCount > 0 && this.props.advertsUsedCount > 0 ? " - " : '';
      return  <div className="col-md-4">
                <a className="price" href="#" >{this.props.bestPrice} € </a> Comme Neuf
                <br/>
@@ -30,12 +17,9 @@ class OfferSummaryComponent extends React.Component {
                <br/><br/>
                <span className="sellerSummary">Voir tous les vendeurs</span>
                <br/>
-               <span className="offerSummary"> {this.props.advertNewCount} neufs dès </span>
-               <a href ="#">
-                  <span className="smallPrice">{this.props.newBestPrice} € </span>
-               </a>
-               <br/>
-               {usedOfferTag}
+               <ProductNbAdverts nbAdverts={this.props.advertsNewCount} bestPrice={this.props.newBestPrice} advertType="new" />
+               {carrierReturn}
+               <ProductNbAdverts nbAdverts={this.props.advertsUsedCount} bestPrice={this.props.usedBestPrice} advertType="used" />
              </div>;
    }
 

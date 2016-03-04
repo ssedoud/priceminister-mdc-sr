@@ -42,7 +42,7 @@ class ProductListDetailComponent extends React.Component {
                    advertsUsedCount={this.props.product.advertsUsedCount}
                    usedBestPrice={this.props.product.usedBestPrice}
                    bestPrice={this.props.product.bestPrice}
-                   advertNewCount={this.props.product.advertNewCount}
+                   advertsNewCount={this.props.product.advertsNewCount}
                    newBestPrice={this.props.product.newBestPrice}
                    />
 
