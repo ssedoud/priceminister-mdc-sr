@@ -12,9 +12,9 @@ class ProductOtherAdvertsComponent extends React.Component {
 
   advertComment(advertComment) {
     if (typeof advertComment !== 'undefined') {
-      return <span>{advertComment}</span>;
+      return <span>{advertComment.substring(0, 200)}{advertComment.length > 200 ? '...' : ''}</span>;
     }
-    return <span>Livraison rapide - Expédition sous 48h/72h.</span>;
+    return <span>Le vendeur n'a pas renseigné d'informations supplémentaires</span>;
   }
 
   sellerScore(averageScore) {
