@@ -12,7 +12,7 @@ class OfferSummaryComponent extends React.Component {
        <div>
          <span className="offerSummary"> {this.props.advertsUsedCount} occasion dès </span>
          <a href ="#">
-          <span className="smallPrice">{this.props.usedBestPrice} €,</span>
+          <span className="smallPrice">{this.props.usedBestPrice} €</span>
          </a>
        </div>;
      }else{

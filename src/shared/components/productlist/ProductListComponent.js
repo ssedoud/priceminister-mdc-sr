@@ -1,21 +1,20 @@
 import React from 'react';
 import ajax from 'superagent';
+
 import ProductListDetailComponent from './ProductListDetailComponent';
+import ProductListPaginationComponent from './ProductListPaginationComponent';
 
 class ProductListComponent extends React.Component {
 
   constructor(props) {
       super(props);
-      console.log('Contructor');
       this.state = {
           productItemList : []
       };
   }
 
-  getProductList(keyword,pageNumber){
-    console.log("ProductListComponent  " + this.props.keyword);
+  getProductList(keyword, pageNumber){
     var keyword = keyword;
-    var pageNumber = pageNumber;
     var baseUrl = 'http://ws.sse-deb-dev.priceminister.lan/rest/navigation/v1/list?'
 
     var keywordParam = '';
@@ -23,13 +22,14 @@ class ProductListComponent extends React.Component {
       keywordParam =`&kw=${keyword}`;
     }
 
-    var pageParam = 1;
+    var pageParam = `&pageNumber=1`;
     if(pageNumber != undefined){
-      pageParam = `&pageNumber=${pageNumber}`;
+      pageParam =`&pageNumber=${pageNumber}`;
     }
+
     ajax
     .get(`${baseUrl}channel=hackathon${keywordParam}${pageParam}`)
-      //.set('User-Agent', "some spoofed agent")
+     // .set('User-Agent', "some spoofed agent")
         .end((error, response) => {
             if (!error && response) {
                 this.setState({ productItemList : response.body['result'].products });
@@ -38,35 +38,29 @@ class ProductListComponent extends React.Component {
             }
         }
     );
-
   }
 
-componentDidMount(){
-  console.log('ajax Mount call');
-   this.getProductList(this.props.keyword,this.props.pageNumber);
-}
+  componentWillMount(){
+     this.getProductList(this.props.keyword, this.props.pageNumber);
+  }
 
-   componentWillReceiveProps(nextProps) {
-      this.getProductList(nextProps.keyword,nextProps.pageNumber);
+  componentWillReceiveProps(nextProps) {
+    console.log('next prpps' + nextProps.pageNumber);
+    this.getProductList(nextProps.keyword, nextProps.pageNumber);
+  }
 
-   }
-
-
-   render() {
-     console.log('rendering list');
-       return (<div>
-         {this.state.productItemList.map((item,index) => {
-              console.log('rendering item list');
-              return (
-                <ProductListDetailComponent key={index} product={item}/>
-              );
-          })}
-
-         </div>);
-   }
-
+  render() {
+     return (<div>
+       {this.state.productItemList.map((item,index) => {
+            return (
+              <ProductListDetailComponent key={index} product={item}/>
+            );
+        })}
+       </div>);
+  }
 
 }
+
 
 
 export default ProductListComponent;

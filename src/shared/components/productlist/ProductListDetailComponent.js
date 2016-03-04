@@ -17,7 +17,7 @@ class ProductListDetailComponent extends React.Component {
                           productImages.length > 0 ){
        url =
        <Link to={productLink}>
-          <img src={this.props.product.imagesUrls[0]} width = "170" heigth= "170" className="img-responsive center-block" alt="Responsive image"/>;
+          <img src={this.props.product.imagesUrls[0]} width = "170" heigth= "170" className="img-responsive center-block" alt="Responsive image"/>
        </Link>;
      }
 
