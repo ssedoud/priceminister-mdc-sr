@@ -7,6 +7,7 @@ class HeaderComponent extends React.Component {
     this.state = {
       keyword: '',
       url:'/productList/',
+      homeUrl : '/'
     };
 
   }
@@ -23,8 +24,10 @@ handleTextChange(e){
                 <div className="header">
                    <div className="row">
                       <div className="col-md-3 vcenter">
-                         <img src="http://www.accengage.com/wp-content/uploads/2014/09/logo-price-minister-rakuten-group.png"
-                            className="img-responsive center-block image-logo-size-mobile" alt="Responsive image"/>
+                         <Link to={this.state.homeUrl}>
+                            <img src="http://www.accengage.com/wp-content/uploads/2014/09/logo-price-minister-rakuten-group.png"
+                              className="img-responsive center-block image-logo-size-mobile" alt="Responsive image"/>
+                        </Link>
                       </div>
                       <div className="col-md-6 vcenter">
                          <div className="input-group ">
