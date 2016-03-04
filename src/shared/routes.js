@@ -12,7 +12,9 @@ export default (
       <Route name="Home" path="/" handler={PriceMinister}>
         <DefaultRoute name="Welcome" handler={HomePage}/>
         <Route name="productList"   path="productList/:searchKeyword" handler={ ProductListPage } />
+        <Route name="productListEmpty"   path="productList/" handler={ HomePage } />
         <Route name="productDetail" path="product/:productId" handler={ ProductPage } />
+        <Route name="productDetailEmpty" path="product/" handler={ HomePage } />
       </Route>
 
 );
