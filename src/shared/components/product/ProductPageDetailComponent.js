@@ -4,6 +4,7 @@ import ajax from 'superagent';
 import ProductTitleComponent from './ProductTitleComponent';
 import ProductDataComponent from './ProductDataComponent';
 import ProductBuyBoxComponent from './ProductBuyBoxComponent';
+import ProductSellYoursComponent from './ProductSellYoursComponent';
 import ProductOtherAdvertsComponent from './ProductOtherAdvertsComponent';
 
 class ProductPageDetailComponent extends React.Component {
@@ -86,6 +87,7 @@ class ProductPageDetailComponent extends React.Component {
                   <div className="row">
                     <ProductDataComponent product={this.state.product}/>
                     <ProductBuyBoxComponent product={this.state.product}/>
+                    <ProductSellYoursComponent product={this.state.product}/>
                   </div>
                 </div>
               </div>

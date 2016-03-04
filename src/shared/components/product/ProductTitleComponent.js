@@ -11,7 +11,7 @@ class ProductTitleComponent extends React.Component {
              <span className="title">{this.props.product.headline}</span>&nbsp;
              <ScoreComponent score={this.props.product.reviewsAverageNote}
                              reviewCount={this.props.product.nbReviews}/>
-           </div>
+           </div>;
   }
 }
 
