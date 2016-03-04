@@ -6,29 +6,45 @@ class ProductBuyBoxComponent extends React.Component {
       super(props);
   }
 
-  // TODO : adapter si la bestOffer est à used (new or used)
+  shipping(advert) {
+    if (advert.shippingAmount == 0) {
+      return <span className="free-shipping">Livraison Gratuite</span>;
+    }
+    return <span className="shippingMode">+ {advert.shippingAmount} € (frais de port) </span>;
+  }
+
+  getBuyBoxAdvert(bestOffers) {
+    if (typeof bestOffers.new !== 'undefined' && typeof bestOffers.used !== 'undefined') {
+      if (bestOffers.new.score > bestOffers.used.score) {
+        return this.props.product.bestOffers.new.adverts[0];
+      }
+      else {
+        return this.props.product.bestOffers.used.adverts[0];
+      }
+    }
+    else if (typeof bestOffers.new !== 'undefined') {
+      return bestOffers.new.adverts[0];
+    }
+    else if (typeof bestOffers.used !== 'undefined') {
+      return bestOffers.used.adverts[0];
+    }
+    return [];
+  }
+
   renderBestOffer() {
     console.log("renderBestOffer");
+    var advert = this.getBuyBoxAdvert(this.props.product.bestOffers);
 
-    var buyBoxAdverts = [];
-    if (this.props.product.bestOffers.new != "undefined") {
-      buyBoxAdverts = this.props.product.bestOffers.new;
-    }
-    else if (this.props.product.bestOffers.used != "undefined") {
-      buyBoxAdverts = this.props.product.bestOffers.used;
-    }
-
-    var advert = buyBoxAdverts.adverts[0];
     return <div className="marginTop_15">
         <span className="price"> {advert.salePrice} € <QualityComponent quality={advert.quality} /> </span>
         &nbsp;&nbsp;<span className="stock"><span className="glyphicon glyphicon-ok"></span>&nbsp;En stock (1)</span>
 
         <br />
-        <span className="free-shipping">Livraison Gratuite</span>
+        {this.shipping(advert)}
         <br /><br />
 
         <img src="img/rsp_icon.png" width="20" height="20" alt="rsp" />
-        <span className="rsp">70 Super Points</span> à cumuler
+        <span className="rsp">{Number((advert.salePrice).toFixed(1))} Super Points</span> à cumuler
 
         <br /><br />
         Commentaire du vendeur :
@@ -50,15 +66,35 @@ class ProductBuyBoxComponent extends React.Component {
 
         <br /><br />
 
-        <span className="offerSummary"> 21 neufs dès </span>
+        <span className="offerSummary"> {this.props.product.nbNewAdverts} neufs dès </span>
         <a href ="#"><span className="smallPrice">{this.props.product.newBestPrice} € </span> </a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <span className="offerSummary">72 occasions dès </span>
+        <span className="offerSummary">{this.props.product.nbUsedAdverts} occasions dès </span>
         <a href ="#"><span className="smallPrice">{this.props.product.usedBestPrice} € </span> </a>
+
+          <br /><br />
+          <div className="seller-box">
+            <div className="seller-summary-box">
+              <div className="col-md-2 vcenter">
+                <img src="img/avatar.png"
+                     width="40"
+                     height="40"
+                     className="img-responsive img-circle center-block"
+                     alt="Responsive image" />
+              </div>
+              <div className="col-md-4 vcenter nopadding">
+                <span className="center-block"><a href="#">{advert.seller.login}</a></span>
+                4,6/5 - 1234 Ventes
+              </div>
+            </div>
+          </div>
+
       </div>;
   }
 
   render() {
-    if (Object.keys(this.props.product).length === 0 || JSON.stringify(this.props.product) === JSON.stringify({})) {
+    if (Object.keys(this.props.product).length === 0
+     || JSON.stringify(this.props.product) === JSON.stringify({})
+     || typeof this.props.product.bestOffers === 'undefined') {
       return <div className="col-md-7"></div>;
     } else {
       return <div className="col-md-7">

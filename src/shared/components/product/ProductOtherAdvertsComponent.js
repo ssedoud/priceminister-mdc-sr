@@ -10,6 +10,21 @@ class ProductOtherAdvertsComponent extends React.Component {
     }
   }
 
+  advertComment(advertComment) {
+    console.log(advertComment);
+    if (typeof advertComment !== 'undefined') {
+      return <span>{advertComment}</span>;
+    }
+    return <span>Livraison rapide - Expédition sous 48h/72h.</span>;
+  }
+
+  sellerScore(averageScore) {
+    if (typeof averageScore !== 'undefined') {
+      return <span>{Number((averageScore).toFixed(1))}</span>;
+    }
+    return <span>5</span>;
+  }
+
   renderAdvert() {
     console.log(this.props.product.adverts);
     return this.props.product.adverts.map((advert) =>
@@ -25,7 +40,7 @@ class ProductOtherAdvertsComponent extends React.Component {
 
         <td className="col-md-5">
         <div className="summary-listing">
-        {advert.sellerComment}
+        {this.advertComment(advert.sellerComment)}
         <br /><br />
         <img src="img/truck.jpeg" width="20" height="20" alt="truck"/> &nbsp;
         <a href="#" className="shippingMode">Modes d''expédition </a>
@@ -35,7 +50,7 @@ class ProductOtherAdvertsComponent extends React.Component {
         <td className="col-md-3">
         <div className="vcenter">
         <span className="center-block"> <a href="#">{advert.seller.login}</a></span>
-        {Number((advert.seller.averageScore).toFixed(1))}/5 - {advert.seller.totalSaleCount} Vente{advert.seller.totalSaleCount < 2 ? '' : 's'}
+        {this.sellerScore(advert.seller.averageScore)}/5 - {advert.seller.totalSaleCount} Vente{advert.seller.totalSaleCount < 2 ? '' : 's'}
         </div>
         </td>
 

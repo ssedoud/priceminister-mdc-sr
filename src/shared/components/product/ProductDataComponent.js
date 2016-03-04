@@ -7,9 +7,9 @@ class ProductDataComponent extends React.Component {
   }
 
   renderImages() {
-    console.log(this.props.product.imagesUrls);
-
-    if (this.props.product != undefined && this.props.product.imagesUrls != undefined && this.props.product.imagesUrls.length > 0) {
+    if (typeof this.props.product !== 'undefined'
+     && typeof this.props.product.imagesUrls !== 'undefined'
+     && this.props.product.imagesUrls.length > 0) {
       return this.props.product.imagesUrls.map((imageUrl) =>
              <h3>
                <img src={imageUrl}
